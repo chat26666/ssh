@@ -67,18 +67,51 @@ cal_func() {
 
                 sip_won=$[$imsi_money/10]
                 imsi_money=$[$imsi_money-$sip_won*10]
-	else
+	elif [ $money -le 11000 ]
+	then
 		chun_won=5
                 imsi_money=$[$imsi_money-5000]
 
                 obak_won=10
                 imsi_money=$[$imsi_money-5000]
 
-                bak_won=$[$imsi_money/100]
-                imsi_money=$[$imsi_money-$bak_won*100]
+                bak_won=10
+                imsi_money=$[$imsi_money-1000]
 
                 osip_won=$[$imsi_money/50]
                 imsi_money=$[$imsi_money-$osip_won*50]
+
+                sip_won=$[$imsi_money/10]
+                imsi_money=$[$imsi_money-$sip_won*10]
+	elif [ $money -le 11500 ]
+	then
+		chun_won=5
+                imsi_money=$[$imsi_money-5000]
+
+                obak_won=10
+                imsi_money=$[$imsi_money-5000]
+
+                bak_won=10
+                imsi_money=$[$imsi_money-1000]
+
+                osip_won=$[$imsi_money-500]
+                imsi_money=$[$imsi_money-500]
+
+                sip_won=$[$imsi_money/10]
+                imsi_money=$[$imsi_money-$sip_won*10]
+	elif [ $money -le 11800 ]
+	then
+		chun_won=5
+                imsi_money=$[$imsi_money-5000]
+
+                obak_won=10
+                imsi_money=$[$imsi_money-5000]
+
+                bak_won=10
+                imsi_money=$[$imsi_money-1000]
+
+                osip_won=10
+                imsi_money=$[$imsi_money-500]
 
                 sip_won=$[$imsi_money/10]
                 imsi_money=$[$imsi_money-$sip_won*10]
