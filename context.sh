@@ -80,8 +80,8 @@ cal_func() {
                 obak_won=10
                 imsi_money=$[$imsi_money-5000]
 
-                bak_won=10
-                imsi_money=$[$imsi_money-1000]
+                bak_won=$[$imsi_money/100]
+                imsi_money=$[$imsi_money-$bak_won*100]
 
                 osip_won=$[$imsi_money/50]
                 imsi_money=$[$imsi_money-$osip_won*50]
@@ -99,8 +99,8 @@ cal_func() {
                 bak_won=10
                 imsi_money=$[$imsi_money-1000]
 
-                osip_won=$[$imsi_money-500]
-                imsi_money=$[$imsi_money-500]
+                osip_won=$[$imsi_money/50]
+                imsi_money=$[$imsi_money-$osip_won*50]
 
                 sip_won=$[$imsi_money/10]
                 imsi_money=$[$imsi_money-$sip_won*10]
