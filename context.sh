@@ -25,6 +25,11 @@ cal_func() {
                 	*) echo -e "\n잘못된 메뉴선택!!"
                    	continue ;;
         esac
+		if [ $money -lt 0 ]
+		then
+			echo "금액이 너무 적습니다!!"
+			continue
+		fi
         else
 		echo "잘못된 금액 입력!!"
 		continue
